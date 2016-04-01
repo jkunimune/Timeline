@@ -1,0 +1,4 @@
+2 Spain
+2 Brittain
+7 Russia
+8 America
