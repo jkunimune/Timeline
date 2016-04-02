@@ -1,4 +1,6 @@
 2 Spain
-2 Brittain
+2 Britain
+3 Umayyad
+6 Mongols
 7 Russia
 8 America

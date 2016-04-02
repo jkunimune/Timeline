@@ -37,12 +37,12 @@ public class Empire {
 	public int sizeAt(int year) {
 		if (time.size() <= 0)
 			return 0;
-		if (year < time.get(0))
+		if (year <= time.get(0))
 			return 0;
 		if (year >= time.get(time.size()-1))
 			return 0;
 		
-		int i = 0;
+		int i = 1;
 		while (time.get(i) < year)
 			i ++;
 		return map(year, time.get(i-1),time.get(i), area.get(i-1),area.get(i));
@@ -51,5 +51,11 @@ public class Empire {
 	
 	public static int map(int x, int x0, int x1, int y0, int y1) {
 		return y0 + (x-x0)*(y1-y0)/(x1-x0);
+	}
+	
+	
+	@Override
+	public String toString() {
+		return name+": born in "+time.get(0)+", died in "+time.get(time.size()-1);
 	}
 }

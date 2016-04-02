@@ -1,4 +1,10 @@
+00661 060 Umayyad
+00750 101 Umayyad
+00751 000 Umayyad
+01206 000 Mongols
+01279 223 Mongols
 01283 000 Russia
+01294 000 Mongols
 01492 000 Spain
 01707 000 Britain
 01776 000 America
@@ -6,7 +12,7 @@
 01866 153 Russia
 01867 062 America
 01922 226 Britain
-02016 003 Spain
-02016 002 Britain
-02016 110 Russia
-02016 062 America
+02017 003 Spain
+02017 002 Britain
+02017 110 Russia
+02017 062 America
