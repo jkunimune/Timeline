@@ -13,11 +13,41 @@ public class Empire {
 	public Empire(int region, String newName) {
 		time = new ArrayList<Integer>();
 		area = new ArrayList<Integer>();
-		color = Color.getHSBColor(region/11f, 1f, 1f);
+		color = colorByRegion(region);
 		name = newName;
 	}
 	
 	
+	private Color colorByRegion(int region) {
+		switch (region) {
+		case 0:
+			return new Color(255,000,000);	// sub-saharan africa
+		case 1:
+			return new Color(255,000,000);	// northern africa
+		case 2:
+			return new Color(255,127,000);	// europe
+		case 3:
+			return new Color(255,255,000);	// middle-east
+		case 4:
+			return new Color(192,255,000);	// india
+		case 5:
+			return new Color(000,255,063);	// east asia
+		case 6:
+			return new Color(000,255,255);	// central asia
+		case 7:
+			return new Color(000,127,255);	// arctic
+		case 8:
+			return new Color(000,000,255);	// north america
+		case 9:
+			return new Color(127,000,255);	// central america
+		case 10:
+			return new Color(255,000,255);	// south america
+		default:
+			return null;
+		}
+	}
+
+
 	public void addPoint(int year, int land) {
 		time.add(new Integer(year));
 		area.add(new Integer(land));

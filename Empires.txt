@@ -1,6 +1,31 @@
-2 Spain
-2 Britain
-3 Umayyad
-6 Mongols
-7 Russia
-8 America
+10 Brazil
+02 Portugal
+02 Spain
+02 France
+02 Britain
+02 Rome
+02 Greece
+03 Ottoman
+03 Umayyad
+03 Rashidun
+03 Abbasid
+03 Achaemenid
+03 Sasanian
+04 Mughal
+04 Maurya
+04 Pala
+05 Xin
+05 Han
+05 Tang
+05 Ming
+05 Qing
+05 Yuan
+05 Japan
+06 Northern Yuan
+06 Timurid
+06 Mongols
+06 Goturk
+06 Golden Horde
+07 Russia
+08 America
+09 Mexico
