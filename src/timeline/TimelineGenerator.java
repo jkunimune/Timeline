@@ -16,6 +16,8 @@ import javax.imageio.ImageIO;
 public class TimelineGenerator {
 
 	public static void main(String[] args) throws IOException {
+		final int vs = 1;
+		
 		ArrayList<Empire> empires = new ArrayList<Empire>();
 		
 		BufferedReader empireReader = new BufferedReader(new FileReader("Empires.txt"));	// get the list of empires
@@ -48,7 +50,7 @@ public class TimelineGenerator {
 		} while (line != null);
 		areaReader.close();
 		
-		BufferedImage output = new BufferedImage(2000,4516, BufferedImage.TYPE_INT_RGB);
+		BufferedImage output = new BufferedImage(1000*vs,4516, BufferedImage.TYPE_INT_RGB);
 		for (int t = -2500; t <= 2016; t ++) {
 			ArrayList<Integer> bounds1 = new ArrayList<Integer>(1);	// empire sizes at t
 			ArrayList<Color> colors = new ArrayList<Color>(1);
@@ -64,11 +66,11 @@ public class TimelineGenerator {
 			}
 			Graphics2D g = (Graphics2D)output.getGraphics();	// draws the shapes
 			g.setColor(Color.WHITE);
-			g.drawLine(0, t+2500, 2000, t+2500);
+			g.drawLine(0, t+2500, 1000*vs, t+2500);
 			for (int i = 1; i < colors.size(); i ++) {
 				g.setColor(colors.get(i));
 				g.setStroke(new BasicStroke(1));
-				g.drawLine(2*bounds1.get(i-1), t+2500, 2*bounds1.get(i), t+2500);
+				g.drawLine(vs*bounds1.get(i-1), t+2500, vs*bounds1.get(i), t+2500);
 			}
 		}
 		for (int t = -2500; t < 2016; t ++) {
@@ -90,7 +92,7 @@ public class TimelineGenerator {
 			for (int i = 1; i < bounds1.size(); i ++) {
 				g.setColor(Color.BLACK);
 				g.setStroke(new BasicStroke(3));
-				g.drawLine(2*bounds1.get(i), t+2499, 2*bounds2.get(i), t+2500);
+				g.drawLine(vs*bounds1.get(i), t+2499, vs*bounds2.get(i), t+2500);
 			}
 		}
 		
